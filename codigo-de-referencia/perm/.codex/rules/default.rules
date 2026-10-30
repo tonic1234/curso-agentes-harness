@@ -1,0 +1,11 @@
+# Codex: reglas sobre comandos. Gana la decisión más restrictiva.
+prefix_rule(
+    pattern = ["git", "push"],
+    decision = "prompt",
+    justification = "Subir cambios requiere una decisión humana",
+)
+prefix_rule(
+    pattern = ["rm", "-rf"],
+    decision = "forbidden",
+    justification = "Borrado recursivo: no desde el agente",
+)

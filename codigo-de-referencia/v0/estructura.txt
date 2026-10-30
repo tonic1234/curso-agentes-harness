@@ -1,0 +1,13 @@
+mi-agente/
+├── AGENTE.md                  ← spec: rol, entrada, salida, herramientas, límites, éxito
+├── AGENTS.md                  ← contrato del repo (o CLAUDE.md), menos de 40 líneas
+├── .claude/ | .codex/ | opencode.json
+│   └── permisos y hook        ← permitido / pregunta / prohibido + bloqueo de una acción
+├── hooks/
+│   └── bloquear-*.sh          ← sale con código 2 para bloquear
+├── evals/
+│   ├── tareas.json            ← 2 pruebas visibles
+│   ├── ocultas/               ← 1 prueba que escribió OTRA pareja (no entra al repo)
+│   ├── run.sh                 ← corre todo, 3 veces
+│   └── resultados.csv
+└── línea-base.csv             ← corrida, pasó (1/0), pasos, segundos, intervenciones

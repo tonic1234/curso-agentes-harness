@@ -1,0 +1,33 @@
+# ── Claude Code ──────────────────────────────────────────────
+# Modelo por fase: Opus para planificar, Sonnet para ejecutar
+#   /model opusplan
+# Subagente barato para tareas simples (.claude/agents/explorador.md)
+---
+name: explorador
+description: Busca en el repo y resume dónde está algo. Sólo lectura.
+model: haiku
+tools: Read, Grep, Glob
+---
+Respondé con rutas y una línea por hallazgo.
+# Todos los subagentes a un mismo modelo:  export CLAUDE_CODE_SUBAGENT_MODEL=haiku
+# Esfuerzo de razonamiento (el pensamiento se factura como salida):  /effort
+
+# ── OpenCode (opencode.json) ─────────────────────────────────
+{
+  "model": "anthropic/claude-sonnet-5-5",
+  "small_model": "anthropic/claude-haiku-5-5",
+  "agent": {
+    "explorar": { "description": "Busca y resume", "model": "anthropic/claude-haiku-5-5" },
+    "disenar":  { "description": "Decisiones de diseño", "model": "anthropic/claude-opus-5-5" }
+  }
+}
+# small_model se usa para tareas livianas como generar títulos.
+# Los identificadores dependen del proveedor: listalos con `opencode models`.
+
+# ── Codex (.codex/agents/explorador.toml) ────────────────────
+name = "explorador"
+description = "Busca en el repo y resume. Sólo lectura."
+model = "<modelo-chico-de-tu-cuenta>"
+model_reasoning_effort = "low"
+sandbox_mode = "read-only"
+developer_instructions = "Respondé con rutas y una línea por hallazgo."

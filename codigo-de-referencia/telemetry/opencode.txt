@@ -1,0 +1,11 @@
+# 1) opencode.json (o ~/.config/opencode/opencode.json): agregá el plugin de la comunidad
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["@devtheops/opencode-plugin-otel"]
+}
+
+# 2) Variables de entorno, antes de abrir OpenCode
+export OPENCODE_ENABLE_TELEMETRY=1
+export OPENCODE_OTLP_ENDPOINT=http://localhost:4317
+
+# No es una función nativa: el plugin exporta trazas, logs y métricas (tokens y latencia).

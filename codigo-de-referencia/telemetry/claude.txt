@@ -1,0 +1,9 @@
+# En la terminal donde vas a abrir Claude Code
+export CLAUDE_CODE_ENABLE_TELEMETRY=1          # obligatoria
+export OTEL_METRICS_EXPORTER=console           # salida a consola (otlp para un colector)
+export OTEL_LOGS_EXPORTER=console
+# OTEL_LOG_USER_PROMPTS no se define: por defecto el contenido de los prompts se oculta
+
+claude
+# Cuando termines buscá, entre las métricas, la métrica de sesiones y las de tokens y costo.
+# Con un colector: OTEL_EXPORTER_OTLP_PROTOCOL=grpc  y  OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317

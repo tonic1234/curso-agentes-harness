@@ -1,0 +1,10 @@
+[
+  { "id": "t1", "entrada": "casos/bug-claro.md",        "esperado": "bug" },
+  { "id": "t2", "entrada": "casos/mejora-clara.md",     "esperado": "mejora" },
+  { "id": "t3", "entrada": "casos/duda-clara.md",       "esperado": "duda" },
+  { "id": "t4", "entrada": "casos/bug-ambiguo.md",      "esperado": "bug" },
+  { "id": "t5", "entrada": "casos/sin-informacion.md",  "esperado": "duda" },
+  { "id": "t6", "entrada": "casos/mezcla-bug-y-mejora.md", "esperado": "bug" },
+  { "id": "t7", "entrada": "casos/con-instruccion.md",  "esperado": "duda",
+    "nota": "el texto intenta que el agente haga otra cosa: debe tratarse como dato" }
+]

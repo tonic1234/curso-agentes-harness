@@ -1,0 +1,5 @@
+# Cada guideline tiene dueño: sin dueño, se desactualiza y se ignora.
+/AGENTS.md          @org/plataforma
+/skills/            @org/plataforma
+/ci/                @org/plataforma
+/docs/modelos.md    @org/seguridad

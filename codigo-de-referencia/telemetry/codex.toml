@@ -1,0 +1,10 @@
+# La telemetría está desactivada por defecto. Se configura en el archivo de USUARIO
+# (los archivos de proyecto .codex/config.toml ignoran la clave otel).
+
+[otel]
+environment = "practica"
+log_user_prompt = false      # false: el contenido de los prompts se oculta
+
+# exporter = "none" registra eventos pero no envía nada.
+# Para enviarlos a un colector local por OTLP/HTTP, según la documentación:
+exporter = { otlp-http = { endpoint = "http://localhost:4318/v1/logs", protocol = "binary" } }
