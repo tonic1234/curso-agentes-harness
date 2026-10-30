@@ -3,6 +3,8 @@
 Curso-taller de dos días para equipos de front y back: entender, dirigir, construir, mejorar y gobernar agentes de código con harness.
 
 **Sitio publicado:** https://tarsterminal.duckdns.org/curso-agentes-harness/
+**Copia en GitHub Pages:** https://tonic1234.github.io/curso-agentes-harness/
+**Repositorio:** https://github.com/tonic1234/curso-agentes-harness
 
 ## Qué hay acá
 
